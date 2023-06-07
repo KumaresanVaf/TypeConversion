@@ -9,10 +9,24 @@
             double Num2 = Num1;
             Console.WriteLine("Implicit Conversion: " + Num2);
 
-            // Explicit Conversion 
+            float myFloat = 3.14f;
+            double myDouble = myFloat;
+            Console.WriteLine(myDouble);
+
+            // Explicit Conversion
             double Num3 = 10.5;
             int Num4 = (int)Num3;
             Console.WriteLine("Explicit Conversion (Casting): " + Num4);
+
+            int IntNum1 = 100;
+            byte ByteNum1 = (byte)IntNum1;
+            Console.WriteLine($"Original Value:{IntNum1} and Converted Value:{ByteNum1}");
+            int IntNum2 = 500;
+            byte ByteNum2 = (byte)IntNum2;
+            Console.WriteLine($"Original Value:{IntNum2} and Converted Value:{ByteNum2}");
+
+            /*string str = "100";
+            int i1 = (int)str;*/
 
             // Parsing
             string myParseString = "3.14";
@@ -20,7 +34,7 @@
             Console.WriteLine("Parsing: " + myParsedDouble);
 
             // TryParse
-            Console.WriteLine("Enter a String");
+            Console.WriteLine("Enter a value");
             string myTryParseString = Console.ReadLine();
             int myTryParsedInt;
             bool success = int.TryParse(myTryParseString, out myTryParsedInt);
@@ -31,6 +45,18 @@
             else
             {
                 Console.WriteLine("TryParse: Conversion failed");
+            }
+
+            string input = "true";
+            bool result;
+            if (bool.TryParse(input, out result))
+            {
+                Console.WriteLine("Parsing succeeded!");
+                Console.WriteLine("Parsed boolean value: " + result);
+            }
+            else
+            {
+                Console.WriteLine("Parsing failed. Invalid input.");
             }
 
             // Boxing and Unboxing
@@ -50,7 +76,19 @@
 
             int c = int.Parse(Console.ReadLine());
             char d = Convert.ToChar(c);
-            Console.WriteLine("Byte to Char: " + d); 
+            Console.WriteLine("Byte to Char: " + d);
+
+            string str = "100";
+            int i1 = Convert.ToInt32(str);
+            Console.WriteLine("Original value str: {0} and Converted Value i1: {1}", str, i1);
+
+            double d1 = 123.45;
+            int i2 = Convert.ToInt32(d1);
+            Console.WriteLine("Original value d: {0} and Converted Value i2:{1}", d, i2);
+
+            float f = 45.678F;
+            string str2 = Convert.ToString(f);
+            Console.WriteLine($"Original value f: {f} and Converted Value str2:{str2}");
         }
     }
 }

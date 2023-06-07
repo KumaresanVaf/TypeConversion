@@ -33,6 +33,16 @@
             double myParsedDouble = double.Parse(myParseString);
             Console.WriteLine("Parsing: " + myParsedDouble);
 
+            string numberString = "123";
+            int number = int.Parse(numberString);
+            Console.WriteLine("Parsed integer: " + number);
+
+
+            string dateString = "2023-06-07";
+            DateTime date = DateTime.Parse(dateString);
+            Console.WriteLine("Parsed date: " + date.ToString("yyyy-MM-dd"));
+
+
             // TryParse
             Console.WriteLine("Enter a value");
             string myTryParseString = Console.ReadLine();

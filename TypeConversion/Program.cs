@@ -63,8 +63,7 @@
             bool result;
             if (bool.TryParse(input, out result))
             {
-                Console.WriteLine("Parsing succeeded!");
-                Console.WriteLine("Parsed boolean value: " + result);
+                Console.WriteLine("TryParse: Conversion successful, value = " + result);
             }
             else
             {

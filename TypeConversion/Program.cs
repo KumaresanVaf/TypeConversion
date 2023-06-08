@@ -13,6 +13,9 @@
             double myDouble = myFloat;
             Console.WriteLine(myDouble);
 
+            var aaa = 889.878f;
+            Console.WriteLine(aaa.GetType());
+
             // Explicit Conversion
             double Num3 = 10.5;
             int Num4 = (int)Num3;
@@ -21,6 +24,7 @@
             int IntNum1 = 100;
             byte ByteNum1 = (byte)IntNum1;
             Console.WriteLine($"Original Value:{IntNum1} and Converted Value:{ByteNum1}");
+
             int IntNum2 = 500;
             byte ByteNum2 = (byte)IntNum2;
             Console.WriteLine($"Original Value:{IntNum2} and Converted Value:{ByteNum2}");
@@ -37,11 +41,9 @@
             int number = int.Parse(numberString);
             Console.WriteLine("Parsed integer: " + number);
 
-
             string dateString = "2023-06-07";
             DateTime date = DateTime.Parse(dateString);
             Console.WriteLine("Parsed date: " + date.ToString("yyyy-MM-dd"));
-
 
             // TryParse
             Console.WriteLine("Enter a value");

@@ -104,52 +104,25 @@
             Console.WriteLine($"Original value f: {f} and Converted Value str2:{str2}");
         }
 
-       
-     /*   public static int wholenum(double input, out double fraction)
+        public void Add(out int num1, out int num2)
         {
-            fraction = input - (int)input;
-            return (int)input;
+            num1 = 30;
+            num1 += 1;
+
+            num2 = 40;
+            num2 += 1;
         }
-
-        public static void Fraction(double input, out double WholeNo, out double fract)
-        {
-            WholeNo = (int)input;
-            fract = input - WholeNo;
-        }*/
-
     }
 
-    class program
+    public class program
     {
         public static void Main(string[] args)
         {
-            /*conversion obj = new conversion();
-            obj.code();*/
-
-            double myinput = 10.3452;
-            double fract;
-            int wholenumber;
-
-            wholenumber = wholenum(myinput, out fract);
-            Console.WriteLine(fract);
-            Console.WriteLine(wholenumber);
-
-            Fraction(myinput, out wholenumber, out fract);
-            Console.WriteLine(fract);
-            Console.WriteLine(wholenumber);
-
-            
-
-        }
-        public static int wholenum(double input, out double fraction)
-        {
-            fraction = input - (int)input;
-            return (int)input;
-        }
-        public static void Fraction(double input, out int WholeNo, out double fract)
-        {
-            WholeNo = (int)input;
-            fract = input - WholeNo;
+            int num1, num2;
+            conversion obj = new conversion();
+            obj.code();
+            obj.Add(out num1, out num2);
+            Console.WriteLine("Num1: {0} \n Num2: {1}", num1, num2);
         }
     }
 }

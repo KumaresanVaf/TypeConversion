@@ -1,8 +1,8 @@
 ﻿namespace conversion
 {
-    public class program
+    public class conversion
     {
-        private static void Main(string[] args)
+        public void code()
         {
             // Implicit Conversion
             int Num1 = 254;
@@ -15,6 +15,8 @@
 
             var aaa = 889.878f;
             Console.WriteLine(aaa.GetType());
+
+            Console.WriteLine(double.MaxValue);
 
             // Explicit Conversion
             double Num3 = 10.5;
@@ -100,6 +102,54 @@
             float f = 45.678F;
             string str2 = Convert.ToString(f);
             Console.WriteLine($"Original value f: {f} and Converted Value str2:{str2}");
+        }
+
+       
+     /*   public static int wholenum(double input, out double fraction)
+        {
+            fraction = input - (int)input;
+            return (int)input;
+        }
+
+        public static void Fraction(double input, out double WholeNo, out double fract)
+        {
+            WholeNo = (int)input;
+            fract = input - WholeNo;
+        }*/
+
+    }
+
+    class program
+    {
+        public static void Main(string[] args)
+        {
+            /*conversion obj = new conversion();
+            obj.code();*/
+
+            double myinput = 10.3452;
+            double fract;
+            int wholenumber;
+
+            wholenumber = wholenum(myinput, out fract);
+            Console.WriteLine(fract);
+            Console.WriteLine(wholenumber);
+
+            Fraction(myinput, out wholenumber, out fract);
+            Console.WriteLine(fract);
+            Console.WriteLine(wholenumber);
+
+            
+
+        }
+        public static int wholenum(double input, out double fraction)
+        {
+            fraction = input - (int)input;
+            return (int)input;
+        }
+        public static void Fraction(double input, out int WholeNo, out double fract)
+        {
+            WholeNo = (int)input;
+            fract = input - WholeNo;
         }
     }
 }
